@@ -2,6 +2,9 @@
 // classe ts
 // con 2 proprieta, constructor e metodi
 class Persona2 {
+    eta;
+    nome;
+    cognome;
     constructor(_nome, _cognome, eta = 0 //shorthand, non e' necessario dichiarare la prop!!
     ) {
         this.eta = eta;
@@ -24,6 +27,7 @@ p2.presenta();
 // passaggio di una classe come argomento del metodo saluta
 // classi derivate
 class Studente extends Persona2 {
+    materiaPref;
     constructor(_nome, _cognome, materiaPref) {
         super(_nome, _cognome);
         this.materiaPref = materiaPref;

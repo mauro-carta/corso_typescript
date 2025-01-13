@@ -1,6 +1,9 @@
 "use strict";
 // lo stesso di prima ma con classe e metodi astratti
 class Persona2Abstract {
+    eta;
+    nome;
+    cognome;
     constructor(_nome, _cognome, eta = 0 //shorthand, non e' necessario dichiarare la prop!!
     ) {
         this.eta = eta;
@@ -10,6 +13,7 @@ class Persona2Abstract {
 }
 // classi derivate
 class Studente2 extends Persona2Abstract {
+    materiaPref;
     constructor(_nome, _cognome, materiaPref) {
         super(_nome, _cognome);
         this.materiaPref = materiaPref;
@@ -20,6 +24,9 @@ class Studente2 extends Persona2Abstract {
 }
 // class singleton
 class Preside {
+    nome;
+    cognome;
+    static instance;
     constructor(nome, cognome) {
         this.nome = nome;
         this.cognome = cognome;
